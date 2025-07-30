@@ -1,25 +1,29 @@
 
  /* this is the entire pages styling */
-html,body {
+html,body,p {
     padding: 0;
     margin: 0;
     font-family: "Comic Relief", system-ui;
     font-weight: 400;
     font-style: normal;
+    
 
 }
 
  /* BG of whole page (not the image just the thing) */
 Body {
-    background-color:aquamarine;
+    display:gridl;
+    grid-template-rows: auto 1fr auto;
+    background-color: #f7db8f;
 
 }
  /* this should be the top of the page where my pfp and name is */
 #banner {
     display:flex;
-    gap: 25px;
-    padding: 30px;
-    font-size: 2vw;
+    gap: 30px;
+    padding: 15px;
+    font-size: min(2vw, 28px);
+    color: #ffffff;
 
 }
  /* this actual pfp styling afaik */
@@ -27,15 +31,31 @@ Body {
     margin: auto;
     display:block;
     width: 35%;
-    border: solid 5px #000000a8;
+    border: solid 5px #ffffffa8;
 
 
 }
  /* this is the header text bg transprancy */
 #banner>p{
     padding: 5px;
-    background-color: #00000027;
+    background-color: #ffffff27;
 
+
+}
+
+.box>h1 {
+    background-color:#5967ff91 ;
+    font-size: min(5vw, 50px);
+    border: solid 5px #ffffffa8;
+    margin: 0;
+
+}
+
+.box>p {
+    font-size: min(1.8vw, 28px);
+    background-color: #5967ff28;
+    padding: 20px;
+    color: #cfcfcf
 
 }
 
@@ -43,26 +63,34 @@ Body {
 #content {
     width: min(80vw, 952px);
     margin: auto;
-    background-color: #354587;
+    background-color: #35265F;
     color: #ffffff;
-    padding: 10px;
-    box-shadow: 0px 0px 20px #ffffff;
-    border: solid 4px #FFFFFFCF
+    padding: 15px;
+    border: solid 5px #ffffffa8;
+    text-align: center;
 
 }
 
 /* This should be the button and its hover function? */
-a {
-    display: block;
-    background-color:#ffffffCF;
+#buttons>a {
+    display: inline;
+    background-color:#ffffffa8;
     padding: 10px;
     margin: auto;
-    box-shadow: 5px 5px 10px #000000;
-    width: 50%;
+    box-shadow: 5px 5px 10px #0000005d;
+    width: 20%;
     margin-bottom: 10px;
     text-decoration-line: none;
+    text-align: center;
 
 
+}
+
+#buttons {
+
+    display: flex;
+    flex-wrap: nowrap;
+    
 }
 
 a:visited {
@@ -74,19 +102,14 @@ a:hover {
     background-color:#ffffff
 }
 
- /* prolly the bottom of the page functions */
+ /* makes the splat stay at the bottom of the page */
 
 footer {
-    margin: auto;
-    display: block;
-    color:#ffffff;
-    background-color: #35265F;
-    position: absolute;
-    bottom: 10px;
-    left: 50%;
-    transform: translate(-50%);
-    padding: 10px;
-    box-shadow: 0px 0px 20px #ffffff;
-
+    display: flex;
+   background-color: transparent;
+   margin: auto;
+   margin-top: 2000px;
+   height: 10vw;
+   width:100px;
+   padding: 20vw;
 }
-
